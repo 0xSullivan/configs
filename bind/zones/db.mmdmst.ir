@@ -1,0 +1,35 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	ns1.mmdmst.ir. admin.mmdmst.ir. (
+			      7		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 	; Negative Cache TTL
+)
+;
+; name servers - NS records
+    IN      NS      ns1.mmdmst.ir.
+    IN      NS      ns2.mmdmst.ir.
+
+; name servers - A records
+ns1          IN      A     	188.165.166.17 
+ns2          IN      A       	188.165.166.17 
+
+; 10.128.0.0/16 - A records
+
+mmdmst.ir. IN NS ns1.mmdmst.ir.
+mmdmst.ir. IN NS ns2.mmdmst.ir.
+mmdmst.ir. IN A 188.165.166.17
+
+
+sh.mmdmst.ir. IN NS ns1.mmdmst.ir.
+sh.mmdmst.ir. IN NS ns2.mmdmst.ir.
+sh.mmdmst.ir. IN A  188.165.166.17
+
+
+api.sh.mmdmst.ir. IN NS ns1.mmdmst.ir.
+api.sh.mmdmst.ir. IN NS ns2.mmdmst.ir.
+api.sh.mmdmst.ir. IN A  188.165.166.17

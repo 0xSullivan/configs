@@ -1,0 +1,29 @@
+upstream app_server_wsgiapp {
+  server 127.0.0.1:8000 fail_timeout=0;
+}
+
+server {
+    listen 80;
+    server_name api.sh.mmdmst.ir www.api.sh.mmdmst.ir;
+
+    location = favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/mmd/sobhanHesab/server;
+    }
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/home/mmd/sobhanHesab/server/server.sock;
+    }
+}
+
+server {
+        listen 80;
+        server_name sh.mmdmst.ir www.sh.mmdmst.ir;
+                root /home/mmd/sobhanHesab/website/dist;
+        location / {
+                # index index.html
+                try_files $uri $uri/ /index.html;
+        }
+}
+
