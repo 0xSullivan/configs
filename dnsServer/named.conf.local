@@ -1,0 +1,18 @@
+zone "mmdmst.ir" IN {
+    type master;
+    file "/etc/bind/zones/db.mmdmst.ir"; 
+    allow-update { none; };
+};
+
+zone "sh.mmdmst.ir" IN {
+    type master;
+    file "/etc/bind/zones/db.mmdmst.ir"; 
+    allow-update { none; };
+};
+
+
+zone "api.sh.mmdmst.ir" IN {
+    type master;
+    file "/etc/bind/zones/db.mmdmst.ir"; 
+    allow-update { none; };
+};
