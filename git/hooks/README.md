@@ -2,15 +2,15 @@
 
 ## There is customized file for:
  1. [x] Vue
- 2. [ ] Django
+ 2. [x] Django
 
 ## On server
  
-    mkdir ~/repo.git
-    cd ~/repo.git
+    mkdir /home/server/repo.git
+    cd /home/server/repo.git
     git init --bare
 
-    chmod +x ~/repo.git/hooks/post-receive
+    chmod +x /home/server/repo.git/hooks/post-receive
     
     git config receive.denyCurrentBranch updateInstead
 
