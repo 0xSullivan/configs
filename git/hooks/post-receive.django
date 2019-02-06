@@ -1,0 +1,7 @@
+git --work-tree=/home/server --git-dir=/home/server/repo.git checkout -f
+git  --work-tree=/home/server --git-dir=/home/server/repo.git pull origin master
+echo "Pulling is Done"
+echo "Go to server directory"
+cd /home/server
+echo "Runserver on 8081"
+python manage.py runserver 0.0.0.0:8081 &
