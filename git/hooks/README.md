@@ -1,9 +1,5 @@
 # Create hooks for auto deploy
 
-## There is customized file for:
- 1. [x] Vue
- 2. [x] Django
-
 ## On server
  
     mkdir ~/.git
