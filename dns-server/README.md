@@ -6,7 +6,7 @@
 ## Config Files:
  - /etc/default/bind9
  - /etc/bind/named.conf.options
- - sudo nano /etc/bind/named.conf.local
+ - /etc/bind/named.conf.local
  - /etc/bind/zones/db.mmdmst.ir
 ---
 	sudo systemctl restart bind9
