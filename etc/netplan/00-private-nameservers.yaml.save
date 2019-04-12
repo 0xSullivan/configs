@@ -1,9 +1,0 @@
-ne
-twork:
-	version: 2
-	ethernets:
-		eth0: 
-			nameservers:
-				addresses:
-				- 188.165.166.17
-				search: [ mmdmst.ir ]
